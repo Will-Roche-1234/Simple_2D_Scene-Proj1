@@ -98,8 +98,9 @@ void update()
     float deltaTime = ticks - gPreviousTicks;
     gPreviousTicks = ticks;
 
-    // sea turtle moves in a diagonal oval shape
+    // sea turtle moves in a diagonal oval shape + rotates clockwise, follows jellyfish
     gObj1Time  += deltaTime;
+    gObj1Angle += ROTATION_SPEED * deltaTime;
     gObj1Position.x = ORIGIN.x + 200.0f + 100.0f * cosf(gObj1Time * 0.8f);
     gObj1Position.y = ORIGIN.y + 50.0f  * sinf(gObj1Time * 0.8f);
 
