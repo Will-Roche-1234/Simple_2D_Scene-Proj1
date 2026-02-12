@@ -45,7 +45,7 @@ float     gObj1Angle     = 0.0f;
 Vector2   gObj1Scale     = { OBJ_SIZE, OBJ_SIZE };
 float     gObj1Time      = 0.0f;
 
-// jellyfish (needs to rotate so has angle and slightly smaller)
+// jellyfish (relative to seaturtle so has orbit angle and slightly smaller)
 Texture2D gObj2Texture;
 Vector2   gObj2Position  = { 0.0f, 0.0f }; //doesn't matter since based on sea turtle (relative)
 float     gObj2Angle     = 0.0f;
