@@ -109,12 +109,12 @@ void update()
     gObj2Position.x = gObj1Position.x + ORBIT_RADIUS * cosf(gObj2OrbitAngle);
     gObj2Position.y = gObj1Position.y + ORBIT_RADIUS * sinf(gObj2OrbitAngle);
 
-    // pufferfish pulses + swims in a circle
+    // pufferfish pulses + swims in a vertical oval shape (to make 3 different translations)
     gObj3PulseTime += deltaTime;
     float scaleAmount = OBJ_SIZE * 0.5f + MAX_AMP * sinf(gObj3PulseTime * PULSE_SPEED);
     gObj3Scale = { scaleAmount, scaleAmount };
-    gObj3Position.x = SCREEN_WIDTH  * 0.25f + 150.0f * cosf(gObj3PulseTime * 0.4f);
-    gObj3Position.y = SCREEN_HEIGHT * 0.5f  + 150.0f * sinf(gObj3PulseTime * 0.4f);
+    gObj3Position.x = SCREEN_WIDTH  * 0.25f + 100.0f  * cosf(gObj3PulseTime * 0.4f);
+    gObj3Position.y = SCREEN_HEIGHT * 0.5f  + 200.0f * sinf(gObj3PulseTime * 0.4f);
 
     // background cycle through the times of day enum (based on how long the day is set as)
     backgroundtime += deltaTime;
